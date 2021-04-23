@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shimla page</title>
+	 
+	<style>
+	
+		.a{
+font-size:40px;
+font-style:italic;
+color:blue;
+}
+.b{
+font-size:25px;
+font-style:italic;
+} 
+
+body{
+background-color: lavender;
+}
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+nav ul li {
+	font-weight: bold;
+	width: 17   5px;
+	height: 60px;
+	line-height: 20px;
+	float:right;
+	text-align: center;
+	word-spacing: 10px;
+	margin-top: 30px;
+}
+nav ul ul{
+	position: absolute;
+	display: none;
+
+
+}
+nav ul li:hover > ul{
+	display: block;
+
+} 
+   /*nav ul li:hover{
+   background:  pink;
+    transition: all ease-in-out 0.45s;*/
+} 
+	</style>
+</head>
+<body>
+	<nav id="active">
+	<ul>     
+		<li><a href="contact">CONTACT US</a></li>
+	
+		<li><a href="gallery">GALLERY</a>
+
+	 <li><a href="">TOURIST PLACE</a>
+
+	<ul>
+        <li><a href="kangra">KANGRA</a></li>
+        <li><a href="kinnaur">KINNAUR</a></li>
+        <li><a href="chamba">CHAMBA</a></li>
+        <li><a href="dharmshala">DHARAMSHALA</a></li>
+        <li><a href="shimla">SHIMLA</a></li>
+        <li><a href="kullu">KULLU-MANALI</a></li>
+       
+    </ul>
+		</li>
+		
+	
+		<li><a href="home">HOME</a></li>
+	</ul>
+	</nav>
+
+	<CENTER>
+	<h1 style="font-size:40px;font-style:italic;"><u>WELCOME TO SHIMLA</u><h1>
+
+	<p style="font-size: 25px; font-style:italic;">Shimla also known as Simla, is the capital and the largest city of the Indian state of Himachal Pradesh. Shimla is also a district which is bounded by the state of Uttarakhand in the south-east, districts of Mandi and Kullu in the north, Kinnaur in the east, Sirmaur in the south and Solan in the west. In 1864, Shimla was declared as the summer capital of British India, succeeding Murree, northeast of Rawalpindi. After independence, the city became the capital of Punjab and was later made the capital of Himachal Pradesh. It is the principal commercial, cultural and educational centre of the state.<br><br>
+
+		Country:-India<br>
+		State:-Himachal pradesh<br>
+		Capital:-Shimla<br>
+    district:-shimla<br>
+		Language:-Hindi,English<br><br></p>
+
+
+
+  <div style="border-style:groove;width:900px;height:500px;"><img src="{% static 'images/apple.jpg' %}" width="900" height="500"></div><br>
+
+
+
+		
+	<h5 style="font-size:40px;font-style:italic;color:blue;"><u>Best Places to Visit in Shimla</u> </h5>
+
+
+	<dl>
+		<dt class="a">01.The Ridge</dt>
+		<br><br><div style="border-style:groove;width:900px;height:500px;"><img src="{% static 'images/ridge1.jpeg' %}" width="900" height="500"><br><br></div> 
+		<dd class="b">The Ridge has three historical statues of the great Mahatma Gandhi, Indira Gandhi and Y.S. Parmar, the first chief minister of Himachal Pradesh. The place has a Tudorbethan style library established in 1910. The Ridge is also Famous because of its Old Christ church which was built in the 1850's.At the center of the town is The Shimla Ridge, which offers spectacular views of the mountain peaks of the land. The Ridge is a spacious open space that runs from east to west along the Mall, which is yet another famous tourist destination. It connects to the Scandal point on the west. If you love the view of mountains, this is your dream destination. The marvelous view of snow-clad mountain ranges spellbinds you.</dd>
+	</dl>
+
+
+ 
+ <dl>
+ 	<dt class="a">02.kufri</dt>
+ 	<br><br>
+ 	<div style="border-style:groove;width:900px;height:500px;"><img src="{% static 'images\kufri.jpg' %}" width="900" height="500"></div><br><br>
+ 	<dd class="b">The Ridge has three historical statues of the great Mahatma Gandhi, Indira Gandhi and Y.S. Parmar, the first chief minister of Himachal Pradesh. The place has a Tudorbethan style library established in 1910. The Ridge is also Famous because of its Old Christ church which was built in the 1850's.Kufri is located 17 kms away from Shimla. At an altitude of 2510 meters and in the Himalayan foothills, the hill station delights nature lovers and adventurers alike. Kufri along with some places around Shimla once belonged to the Nepal kingdom. This place is must visit for everyone visiting Shimla because of the stunning views it offers and also because of its status as an adventure hub.</dd>
+ </dl>
+
+ <dl>
+ 	<dt class="a">03.Jakhoo Hill</dt>
+ 	<br><br>
+ 	<div style="border-style:groove;width:900px;height:500px;"><img src="{% static 'images/jakoo.jpg' %}" width="900" height="500"></div><br><br>
+ 	<dd class="b">Jakhoo Temple is an ancient temple in Shimla, dedicated to the Hindu deity Hanuman. It is situated on Jakhoo Hill, Shimla's highest peak, 2.5 km (1.6 mi) east of the Ridge at a height of 2,455 m (8,054 ft) above sea level. Each year, a festival is held on DussehraSituated 2 km from Shimla, Jakhoo Hill is the highest peak in the entire hill station offers scenic view of the city and snow capped Himalayan Mountains. The 8000 ft Jakhoo Hill is a famous tourist attraction that is visited by nature lovers and pilgrims as well. It is home to the ancient Jakhoo Temple, which has a large statue of Hanuman, its chief deity. Located at an altitude of 8500 feet above sea level, the 108 feet tall statue has sensors to drive away the birds.</dd>
+ </dl>
+</body>
+</html>

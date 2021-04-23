@@ -1,0 +1,75 @@
+{% load static %}
+
+<html>
+
+<head>
+<style type="text/css">
+		
+ #logo
+{
+  position:absolute;
+  left:0px;
+  top:5px;
+    height:200px;
+  width:200px;
+  border-radius: 100px;
+  font-size: 20px;
+  float:left;
+}
+
+hr.new5 {
+  border: 10px solid green;
+  border-radius: 5px;
+}
+
+.gallery
+{
+margin:5px;
+border:1px  solid #ccc;
+float:left;
+width:390px;
+	
+}
+.desc
+{
+padding:15px;
+text-align:center;
+}
+
+</style>
+</head>
+
+
+<body>
+	
+<div class="logo" id="logo"><img src="{%static 'images/20200730_221201.jpg' %}" id="logo" /></div>
+
+	<h1 style="margin-left: 280px;margin-top:40px;font-size: 100px;font-style: italic;">Gallery Page</h1>
+
+
+<br>
+
+
+<hr class="new5">
+
+<br>
+
+
+
+{% block content %}
+
+{% for post in posts %}
+
+<div class="gallery">
+<img  src="{{post.img.url}}" alt="" height="50%" width="100%">
+
+
+<h1 class="desc">{{post.msg}}</h1>
+
+</div>	
+{% endfor %}
+{% endblock %}
+
+
+</body>
+</html>

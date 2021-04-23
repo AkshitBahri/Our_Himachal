@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>SACRED HIMACHAL </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+
+<style type="text/css">
+  body {
+
+background-image:url("{% static 'images/w233.jpg' %}");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+  hr.new5 {
+  border: 10px solid #ffffff;
+  border-radius: 5px;
+    }
+
+
+
+.social:hover {
+     -webkit-transform: scale(1.0);
+     -moz-transform: scale(1.0);
+     -o-transform: scale(1.0);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+ .border
+{
+background:url({% static 'images/w23.jpg' %});
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center; 
+text-align: center;
+}
+
+
+   
+</style>
+
+
+</head>
+
+
+<body>
+<h1 style="font-family:Brush Script MT;text-align:center;font-size:60px;color:#ffffff;padding: -20px;"><span style="font-size:140px;">C</span>ontact<span style="font-size:140px;">U</span>s </h1>
+
+<img style="float:left;margin-top: -170px;border-radius:240px;" src="{% static 'images/20200730_221201.jpg' %}" width="170"height="170">
+
+<hr class="new5">
+
+
+
+
+
+<div class="border"style="border-style:solid;border-radius:10px;height:400px;width: 500px;float:right;opacity:0.8;">
+
+<center>
+<form  method="POST" action="contact">
+
+{% csrf_token %}
+
+<br>
+<label style="color:white;margin-right: 100px;">Name</label>
+<input type="text" name="name" palceholder="name"Value=""style="width:248px">
+
+
+<br><br>
+
+
+<label style="color:white;margin-right: 320px;">MESSAGE</label>
+<textarea rows='6' cols='40'input type="message" name="message" value=""/></textarea><br>
+
+ <br>
+ <input type="submit">
+
+</form>
+</center>
+</div>
+
+<div style="width:700px;" class="row g-0 bg-light position-relative">
+  <div class="col-md-6 mb-md-0 p-md-4">
+    <img src="{% static 'images/developer (1).jpg' %}" class="w-100" alt="...">
+  </div>
+  <div class="col-md-6 p-4 ps-md-0">
+    <h5 class="mt-0"><center><b>ABOUT</b></center></h5>
+    <p>Developer:Akshit Bahri</p>
+    <p1>Department:Computer Science & Engineering</p1>
+    <p>Punjabi University Patiala</p>
+    <p1>Email - akshitbahari3@gmail.com</p1><br>
+    <p1>Official Email-11901315@csepup.ac.in</p1>
+
+    <p>Contact - +91 8629014355</p>
+   
+  </div>
+</div>
+
+
+<footer>
+
+
+<div style="margin-top:50px;filter:brigtness(100%);width:710px;height:100px;border-radius:0px">
+
+<div class="social" style="height:200px;width:200px;margin-left:0px;margin-top:0px;">
+<a href="https://www.facebook.com/" ><img src="{% static 'images3/download (2).png' %}"height="80" width="90"style="border-radius: 100px;border:none;"></a>
+</div>
+
+<div class="social" style="height:210px;width:200px;margin-left:110px;margin-top:-195px;">
+<a href="#" ><img src="{% static 'images3/download (1).png' %}"height="80" width="90"style="border-radius: 100px;border:none;"></a>
+</div>
+
+<div class="social" style="height:210px;width:200px;margin-left:210px;margin-top:-215px;">
+<a href=""><img src="{% static 'images3/download (3).png' %}"height="80" width="90"style="border-radius: 100px;border:none;"></a>
+</div>
+
+<div class="social" style="height:200px;width:200px;margin-left:320px;margin-top:-210px;">
+<a href="#" ><img src="{% static 'images3/insta.jpg' %}"height="80" width="90"style="border-radius: 100px;border:none;"></a>
+</div>
+
+<div class="social"  class="" style="height:200px;width:200px;margin-left:430px;margin-top:-200px;">
+<a href="https://www.google.com/"><img src="{%static 'images3/download.jpg' %}"height="80" width="90"style="border-radius: 100px;border:none;"></a>
+</div>>
+
+</div>
+
+<br><br>
+
+ <h5 style="color: white; text-align: center;">Copyright &copy; Akshit_bahri<h5>
+  <br>
+ </footer>
+
+<script src="{%static 'js/jquery.js' %}"></script>
+<script src="{%static 'js/bootsrap.min.js' %}"></script>
+</body>
+</html>

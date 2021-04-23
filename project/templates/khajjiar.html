@@ -1,0 +1,176 @@
+{% load static %}
+<html>
+<head>
+ <title>KHAJJIAR</title>
+ <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+ <link rel="stylesheet" type="text/css" href="swiper.min.css"/>
+ 
+
+<style type="text/css">
+   
+
+
+#kullu 
+  {
+  position:absolute;
+  left:77vh;
+  font-size:80px;
+  color:lightgreen;
+  opacity:1;
+  } 
+#logo
+{
+  position:absolute;
+  left:0px;
+  top:10px;
+  height:200px;
+  width:200px;
+  border-radius: 100px;
+  float:left;
+}
+p
+{
+  position:absolute;
+  left:700px;
+  top:400px;
+}
+body
+{
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("{%static 'images/abc.jpg' %}");
+  width:70vh;
+  height:100vh;
+  background-size:cover;
+  font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin:0;
+    padding:0;  
+    background-repeat: none;
+}
+.swiper-container
+{
+  width:100%;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+.swiper-slide
+{
+  
+  width:500px;
+  height:350px;
+  color:white;
+  padding:0px;
+  border-width:3px;
+  border-style:solid;
+  border-color:black;
+  
+}
+#manali
+{
+  position:relative;
+  left:70vh;
+  top:120px;
+  font-size:30px;
+  animation-name:kufri;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes kufri
+{
+  0%{color:green;}
+  100%{color:white;}
+}
+#imageslider
+{
+  position:relative;
+  top:100px;
+  left:20px;
+}
+#details
+{
+  position:absolute;
+  top:200px;
+  font-size: 20px;
+  left:550px;
+  color:#79B372;
+
+}
+
+ </style>>
+</head>
+
+
+
+<body>
+<div id="logo"><img src="{%static 'images/20200730_221201.jpg' %}" id="logo" /></div>
+<div id="kullu">KHAJJIAR</div>
+<div id="manali">Top 3 Tourist Places in KHAJJIAR</div>
+<div id="imageslider">
+<div class="swiper-container">
+ <div class="swiper-wrapper">
+   <div class="swiper-slide">
+   <div class="imgBx">
+    <img src="{%static 'images/kalatop.jpg' %}" height="350px" width="500px" />
+   </div>
+   <div class="details">
+    <h3>Kalatop Wildlife Sanctuary</h3>
+	<a href="https://www.holidify.com/places/khajjiar/kalatop-wildlife-sanctuary-sightseeing-2322.html">for more details</a>
+   </div>
+  </div> 
+  <br><br><br><br><br>
+  <div class="swiper-slide">
+   <div class="imgBx">
+    <img src="{% static 'images/Khajjiar lake.jpg' %}" height="350px" width="500px" />
+   </div>
+   <div class="details">
+   <h3>Khajjiar lake</h3>
+    <a href="https://www.holidify.com/places/khajjiar/khajjiar-lake-sightseeing-2324.html">for more details</a>
+   </div>
+  </div> 
+  <br><br><br><br><br>
+  <div class="swiper-slide">
+   <div class="imgBx">
+    <img src="{%static 'images/khajjiar trek.JPG' %}" height="350px" width="500px" />
+   </div>
+   <div class="details">
+    <h3>Khajjiar Trek</h3>
+    <br>
+	<a href="https://www.holidify.com/places/khajjiar/khajjiar-trek-sightseeing-2325.html">for more details</a>
+   </div>
+  </div> 
+  </div> 
+ <div class="swiper-pagination"></div>
+</div>
+<script type="text/javascript" src="swiper.min.js"></script>
+<script>
+var swiper= new Swiper('.swiper-container',{
+effect: 'coverflow',
+grabCursor: true,
+centeredSlides: true,
+slidesPerview:'auto',
+coverflowEffect:{
+rotate:50,
+stretch:0,
+depth:100,
+modifier:1,
+slideShadows:true,
+},
+pagination:{
+el:'.swiper-pagination',
+},
+});
+</script>
+</div>
+
+<br><br><br><br><br>
+<p align=right>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13452.372357243517!2d76.05429872824278!3d32.550360746654235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c966a723433b5%3A0xb281d8e676ebd3dc!2sKhajjiar%2C+Himachal+Pradesh+176314!5e0!3m2!1sen!2sin!4v1549723802078" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+</p>
+
+<br>
+<div id="details"><em>Khajjiar (Hindi: खज्जियार) is a hill station in Chamba district, Himachal Pradesh, India, located approximately 24 km from Dalhousie.<br/>
+
+Khajjiar sits on a small plateau with a small stream-fed lake in the middle that has been covered over with weeds. The hill station is surrounded by meadows and forests. It is about 6,500 feet (2,000 m) above sea level in the foothills of the Dhauladhar ranges of the Western Himalayas and peaks can be seen in the distance. It is part of the Kalatop Khajjiar Sanctuary.<br/>
+
+Khajjiar can be reached from Dalhousie, the nearest major town and hill station, by bus in an hour or so. It has a rare combination of three ecosystems: lake, pasture and forest.</em></div>
+
+</body>
+</html>

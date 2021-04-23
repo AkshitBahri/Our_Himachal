@@ -1,0 +1,174 @@
+{% load static %}
+
+<html>
+<head>
+ <title>KINNAUR</title>
+ <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+ <link rel="stylesheet" type="text/css" href="swiper.min.css"/>
+ 
+
+
+ <style type="text/css">
+   
+   #kullu 
+  {
+  position:absolute;
+  left:77vh;
+  font-size:80px;
+  color:lightgreen;
+  opacity:1;
+  } 
+#logo
+{
+  position:absolute;
+  left:0px;
+  top:5px;
+    height:200px;
+  width:200px;
+  border-radius: 100px;
+  font-size: 20px;
+  float:left;
+}
+p
+{
+  position:absolute;
+  left:700px;
+  top:400px;
+}
+body
+{
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("{%static 'images/abc.jpg'%}");
+  width:70vh;
+  height:100vh;
+  background-size:cover;
+  font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin:0;
+    padding:0;  
+    background-repeat: none;
+}
+.swiper-container
+{
+  width:100%;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+.swiper-slide
+{
+  
+  width:500px;
+  height:350px;
+  color:white;
+  padding:0px;
+  border-width:3px;
+  border-style:solid;
+  border-color:black;
+  
+}
+#manali
+{
+  position:relative;
+  left:70vh;
+  top:120px;
+  font-size:30px;
+  animation-name:kufri;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes kufri
+{
+  0%{color:green;}
+  100%{color:white;}
+}
+#imageslider
+{
+  position:relative;
+  top:100px;
+  left:20px;
+}
+#details
+{
+  position:absolute;
+  top:200px;
+  left:550px;
+  font-size: 20px;
+  color:#79B372;
+
+}
+ </style>
+</head>
+<body>
+<div id="logo"><img src="{%static 'images/20200730_221201.jpg' %}" id="logo" /></div>
+<div id="kullu">KINNAUR</div>
+<div id="manali">Top 4 Tourist Places in KINNAUR </div>
+<div id="imageslider">
+<div class="swiper-container">
+ <div class="swiper-wrapper">
+   <div class="swiper-slide">
+   <div class="imgBx">
+    <img src="{%static 'images/reckong.jpg'%}" height="350px" width="500px" />
+   </div>
+   <div class="details">
+    <h3>Reckong Peo</h3>
+	<a href="https://www.expedia.co.in/Kufri-Fun-World-Shimla-District.d6184896.Attraction">for more details</a>
+   </div>
+  </div> 
+  <br><br><br><br><br><br>
+  <div class="swiper-slide">
+   <div class="imgBx">
+    <img src="{%static 'images/kalpa.jpg' %}" height="350px" width="500px" />
+   </div>
+   <div class="details">
+   <h3>Kalpa</h3>
+    <a href="https://www.holidify.com/places/kufri/skiing-sightseeing-5083.html">for more details</a>
+   </div>
+  </div>
+  <br><br><br><br><br> 
+  <div class="swiper-slide">
+   <div class="imgBx">
+    <img src="{%static 'images/sarahan.jpg'%}" height="350px" width="500px" />
+   </div>
+   <div class="details">
+    <h3>Sarahan</h3>
+	<a href="https://www.tourmyindia.com/states/himachal/himalayan-national-park-kufri.html">for more details</a>
+   </div>
+  </div> 
+  <br><br><br><br><br>
+  <div class="swiper-slide">
+   <div class="imgBx">
+    <img src="{%static 'images/nako.jpg' %}" height="350px" width="500px" />
+   </div>
+   <div class="details">
+    <h3>Nako</h3>
+	<a href="https://www.tourmyindia.com/states/himachal/mahasu-peak-kufri.html">for more details</a>
+   </div>
+  </div> 
+  </div>
+ <div class="swiper-pagination"></div>
+</div>
+<script type="text/javascript" src="swiper.min.js"></script>
+<script>
+var swiper= new Swiper('.swiper-container',{
+effect: 'coverflow',
+grabCursor: true,
+centeredSlides: true,
+slidesPerview:'auto',
+coverflowEffect:{
+rotate:50,
+stretch:0,
+depth:100,
+modifier:1,
+slideShadows:true,
+},
+pagination:{
+el:'.swiper-pagination',
+},
+});
+</script>
+</div>
+<p align=right>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d870024.1227899713!2d77.81551364031439!3d31.591886704602626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390643bef5f84a51%3A0xddfea72b01d3f354!2sKinnaur%2C+Himachal+Pradesh!5e0!3m2!1sen!2sin!4v1549724521991" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+</p>
+<div id="details"><em>Kinnaur is one of twelve administrative districts in the Indian state of Himachal Pradesh, India. The district is divided into three administrative areas – Pooh, Kalpa, and Nichar(Bhabanagar)– and has six tehsils (counties). The administrative headquarters of Kinnaur district is at Reckong Peo.<br/> From here Kinnaur Kailash, considered to be the abode of Lord Shiva, can be seen. As of 2011, it is the second least populous district of Himachal Pradesh (out of 12 districts), after Lahaul and Spiti,[1] in spite of that nine vital languages are spoken in the district.</em></div>
+
+</body>
+</html>

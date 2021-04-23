@@ -1,0 +1,85 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>UPLOAD IMAGE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+
+	body
+{
+background-color:#C8C8C8;
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color:#ff0000;
+  border: none;
+  border-radius: 15px;
+  }
+
+.button:hover {background-color: #ff3333}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+ <img src="{% static 'images3/wallpaperflare.com_wallpaper.jpg' %}"width="770"height="590" style="border-radius:0px;">
+ 
+<center>
+
+  
+<div class="" style="margin-top:-500px;border-style:none;width:380px;height:460px;border-radius:20px;margin-left:700px;background-color:#004466;">
+<form method="POST" action="ims" enctype="multipart/form-data">
+
+  {%csrf_token%}
+  
+<img src="{%static 'images3/Upload-reference.png'%}"width="100"height="100" style="border-radius: 80px;margin-top:-50px;"><br><br>
+
+ <label style="color:white;"> <b>File upload:</b> </label><input  type="file" name="img" multiple="multiple"></p>
+ 
+
+<br><br>
+ 
+	<label style="color:white;"><b>Message</b></label>
+			<textarea rows='8' cols='40'input type="message" name="msg" value=""/></textarea><br>
+
+<br><br><br><br><br>
+ 
+ 	<input  class="button" type="submit"name="submit">
+     <input style="margin-top:-80px;" class="button" type="reset" name=""></div>
+
+</p>
+ </p>
+
+
+</form>
+</div>
+</center>
+
+
+
+ 
+</body>
+</html>

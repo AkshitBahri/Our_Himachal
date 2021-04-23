@@ -1,0 +1,563 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OUR HIMACHAL+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+<style>
+
+body {
+
+background-image:url("{% static 'images/w233.jpg' %}");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar 
+a {
+  float: left;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn 
+{
+  background-color: #66b3ff;
+}
+
+.dropdown-content
+ {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:    #99ccff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.heading
+{
+background:url({% static 'images/w23.jpg' %});
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center; 
+text-align: center;
+}
+
+
+
+.container {
+  position: relative;
+  width: 400px;
+}
+
+.image {
+  display: block;
+  width: 400px;
+  height: 300px;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: grey;
+}
+
+.container:hover .overlay {
+  opacity: 0.7;
+  filter:brigtness(100%)
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("{% static 'images/w24.jpg' %}");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax1 {
+  /* The image used */
+  background-image: url("{% static 'images/w24.jpg' %}");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button
+{
+  border-radius:40px;
+  border:none;
+  color:white;
+  background-color:#00b300;
+  height:40px;
+  width:160px;
+  margin-left:70px;
+}
+
+
+
+
+
+
+ .parallex2 h1{
+      font-size: 40px;
+      position: relative;
+      top: 50px;
+      width: 100%;
+      height: 40px;
+      color: red;
+      text-align: center;
+      }
+
+    .parallex2{
+      width: 100%;
+      height: 700px;
+      background-image: url({% static 'backgrounds/5.jpg' %});
+      background-size: 100% 100%;
+      background-attachment: fixed;
+    }
+
+      .border{
+      position: relative;
+      top: 140px;
+      width: 100%;
+      height: 400px;
+    
+      }
+    .tradition{background-color:green;color:white;text-align:center;}
+     div.gallery {margin: 25px;border: 2px solid black;float: left;width:auto;}
+     div.gallery:hover {border: 1px solid #777;}
+  hr.new5 {
+  border: 10px solid green;
+  border-radius: 5px;
+    }
+
+
+</style>
+</head>
+<body>
+<div class="heading"style="height:180px;width:1342px;margin-top:20px;background-color:black;filter:brigtness(100%);">
+<h1 style="font-family:Brush Script MT;text-align:center;font-size:60px;color:#ffffff;padding: -20px;"><span style="font-size:140px;">O</span>ur<span style="font-size:140px;">H</span>IMACHAL  </h1>
+
+<img style="margin-left:-1040px;margin-top: -270px;border-radius:240px;padding: 50px;" src="{% static 'images/20200730_221201.jpg' %}"width="170"height="170">
+
+
+</div>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#">_</a>
+
+  {% if user.is_authenticated %}
+   <div style="float:right;color:white;"><li >Hello,{{user.first_name}}</li></div>
+   <a href="account/logout">Logout!............</a>
+  {% else %}
+    <a href="#">_</a>
+    <a href="account/register">REGISTER</a>
+    <a href="account/login">Login page</a>
+  {% endif %}
+   <div class="dropdown">
+
+   <button style="font-size: 18px;"class="dropbtn" >Tourist Places 
+     <i class="fa fa-caret-down"></i>
+    
+   <div class="dropdown-content">
+    <a href="kullu">Kullu</a>
+    <a href="chamba">Chamba</a>
+    <a href="kangra">Kangra</a>
+    <a href="khajjiar">Khajjiar</a>
+    <a href="kinnaur">Kinnaur</a>
+    <a href="shimla">Himachal's Queen</a>
+    <a href="dharmshala">Dharmashala</a>
+
+    <a href="fort">Forts</a>
+    <a href="temple">Religious temples</a>
+    
+   </div>
+   </button>
+  </div> 
+   <a href="ims">Upload Image</a>
+   <a href="gallery">Beautiful places</a>
+   <a href="contact">Contact Us</a>
+</div>
+
+<form style="float: right;;background-color: green;padding-top: 0px;margin:3px;position: relative;" method="get" action="http://www.google.com/search">
+  <input type="text"   name="q" size="25" maxlength="155" value="Search for places" />
+  <input type="submit" value="Search" />
+
+</form>
+
+<br><br>
+<div style="height:70px;width:1348px;margin-top:20px;background-color:lightgrayfilter:brigtness(100%);opacity:0.8;">
+<label style="font-size:20px;margin-left:100px;">Email :</label>
+<input type="text" name="Email" value=""/>
+
+<label style="font-size:20px;margin-left:100px;">Password :</label>
+<input type="password" name="password" value=""/>
+
+
+<input type="submit" name="subsribe" value="subsribe"/style="height:30px;width:100px;font-size:20px;margin-left:40px;margin-top:14px;">
+
+</div>
+
+<br>
+
+<div class="parallax">
+
+<div style="width:410px;height:400px;background-color:none:brigtness(100%);margin-left: 400px;padding:70px;">
+        <img src="{% static 'images/maxresdefault.jpg' %}"width="810"height="470"></div>
+         <img style="margin-left: -21px; margin-top:-525px; padding: 60px;" src="{% static 'images/giphy (5).gif' %}"width="430"height="465">
+
+</div>
+
+<br>
+<div style="height:400px;background-color:lightgreyfilter:brigtness(100%);opacity:0.4px;font-size:30px">
+<p1 style="font-family: times new roman;color: #f2f2f2">Himachal is in the western Himalayas. Covering an area of 55,673 square kilometres (21,495 sq mi), it is a mountainous state. Most of the state lies on the foothills of the Dhauladhar Range. Himalayas in Himachal’ or one must say Himachal in Himalayas. ‘Him’ in Hindi literally means ice or snow and ‘alaya’ means home, which makes Himalayas ‘The Home of Snow’ and from there Himachal gets its name meaning ‘Land of Snow’.While traditionally Himachal was known as a summer destination, the Department of Tourism & Civil Aviation Government of Himachal Pradesh  has taken special efforts to break the seasonality factor and has developed diversified tourism products to attract tourists in other seasons too. Now Himachal is known as “A Destination for All Seasons and All Reasons”.</p1>
+<br>
+
+<div style="border-style:solid;border-radius:10px;height:200px;width: 200px;float:right;color: white;margin-top: -10px;">
+<button style="background-color:black;"><a style="color: white;"href="https://online.hrtchp.com/oprs-web/guest/home.do?h=1">Book a Bus</a></button>
+<button style="background-color:black;"><a style="color: white;"href="https://online.hrtchp.com/oprs-web/guest/home.do?h=1">Book a Hotel</a></button>
+</div>
+
+</div>
+<br>
+
+
+  
+
+  <div class="parallex2">
+      <h1 style="color:#f2f2f2;font-family: 'Coiny', cursive;color: white;"><b>Memorable Journeys</b></h1>
+      <div class="border"style="width:425px;height:415px;background-color:white">
+        <img src="{% static 'images/Hidima-temple-images.jpg' %}"width="425"height="240">
+        <h3 align="center"style="color:orange;font-family: 'Coiny', cursive;">
+          <b>Hidimba</b>
+        </h3>
+          <p>Hidimba Devi Temple, locally known as <b>Dhungari Temple</b>, also known variously as the Hadimba Temple, is located in Manli, a hill station in the State of Himāchal Pradesh in north India. It is an ancient cave temple dedicated to Hidimbi Devi, wife of Bhima, a figure in the Indian epic Mahabharta.
+          </p>
+      </div>
+    </div>
+
+
+ <div class="parallex2">
+       <div class="border"style="width:420px;height:420px;background-color:white;margin-left:450px;margin-top: -640px;">
+        <img src="{% static 'images/gettyimages-514086385-612x612.jpg' %}"width="420"height="240">
+        <h3 align="center"style="color:orange;font-family: 'Coiny', cursive;">
+          <b>MINI SWITZERLAND</b>
+        </h3>
+          <p1>Khajjiar is a hill station in <strong>Chamba</strong> district, Himachal Pradesh, India, located approximately 24 kilometres (15 mi) from Dalhousie.
+  Khajjiar sits on a small plateau with a small stream-fed lake in the middle that has been covered over with weeds. It is about 2,000 metres (6,500 ft) above sea level in the foothills of the Dhauladhar.
+          </p1>
+      </div>
+    </div>
+
+<div class="parallex2">
+       <div class="border"style="width:430px;height:420px;background-color:white;margin-left:900px;margin-top: -700px;">
+        <img src="{% static 'images/nb.jpg' %}"width="430"height="240">
+        <h3 align="center"style="color:orange;font-family: 'Coiny', cursive;">
+          <b>Norbulingka</b>
+        </h3>
+          <p> Norbulingka Palace is situated in the west side of Lhasa,a short distance to the southwest of Potala Palace.Norbulingka covers an area of around 36 hectares (89 acres) and considered to be the largest man made garden in Tibet.
+          </p>
+      </div>
+    </div>
+
+    <hr class="new5">
+<marquee behavior="alternate" scrollamount="5">
+  <img src="{% static 'images/lord-hanuman-statue-jakhoo-temple-260nw-163062866.webp' %}" width="210"height="130">
+   <img src="{% static 'images/images (1).jpeg'%}" width="210"height="130">
+    <img src="{% static 'images/images (5).jpeg'%}" width="210"height="130">
+      <img src="{% static 'images/laxmina.jpg' %}" width="210"height="130">
+        <img src="{% static 'images/logo.jpg' %}" width="210"height="130">
+          <img src="{% static 'images/photocard 2.jpg' %}" width="210"height="130">  
+             <img src="{% static 'images/kufri.jpg' %}" width="210"height="130">
+             <img src="{% static 'images/manali1.jpg' %}" width="210"height="130">
+</marquee>
+
+<h1 id="beautyy" class="tradition"><b>BEAUTY</b></h1>
+<BR><a href="#h1"><button>Back to Home</button></a>
+<div class="gallery">
+<img src="{%static 'images\e1.jpeg' %}" width="200" height="200">
+</div>
+<div class="gallery">
+<img src="{% static 'images\dham.jpg' %}" width="200" height="200">
+</div>
+<div class="gallery">
+<img src="{% static 'images\photocard 1.jpg' %}" width="200" height="200">
+</div>
+<div class="gallery">
+<img src="{%static 'images\photocard 6.jpg' %}" width="200" height="200">
+
+</div>
+<div style="color:white;">
+<h2>Introduction</h2>
+<p>
+In Northerner India there is state known as Himachal Pradesh (H.P) filled up by natural beauty.It is bordered by Jammu and Kashmir, Punjab, and Haryana.It came into existence under Himachal Pradesh act,1971.There is a huge source of fresh water as rivers and by building dams on this lot of electricity is produced and sold to other states like Haryana, Punjab etc
+
+
+
+<h2>Climate conditions</h2>
+
+<p>
+Himachal is a mountainous state and situated in Himalayas.The main source of water here are river and glaciers.The main rivers of h.p are Chenab, Ravi, Beas, Sutlej, Yamuna.
+
+Climate conditions of H.p varies according to area. Some areas are cold like Kulu-Mnali,Chamba, Shimla, Dharmshala and some areas have average temperature like Mandi, Sundernagar, Bilaspur.It has combination of three season cold, hot, rainy which add more beauty to this state.
+</p>
+<h2>Varities of plants</h2>
+<p>
+Himachal is covered by trees of different types. the main trees of h.p are oaks,birches,sal,shisham and flowers like lilies,,marigold,roses, tulip.
+The plants which are unable to withstand the high humidity and cold not found here they can be grow under greenhouses.
+</p>
+<h2>Travelling facilities</h2>
+<p>
+Due to the hilly area the major source of transport here are roads. There are 8 national highways and 18 state highways. The entry into Himachal is through Delhi and Chandighar as main entery after Kirtpur entery into Swarghat starting point to Himachal.
+The main states of H.P are Mandi, Kulu-Mnali, Kangra, Hamirpuretc. For transport through airways , There are Gaggal airport, Bhuntar airport.Most of time roads get closed due to snowfall and landsliding.
+</p>
+<h2>Community</h2>
+<p>
+Most of the community of H.P are "Hindu" but people of different states also resides here. The people of Himachal has there mother language as Phari but it also has variety due area division.Himachal is one of the religious place about 84,000 god and goddess resides ghere are they can be felt in temples in every area of Himachal.
+</p>
+<h2>Recipes</h2>
+<p>
+Himachali people have lot of variety in their food but rice is common in all. There is a special food in every occasion known as "Dham" which includes madra, phari aalu, jhoul, patrode etc.
+</p>
+<h2>Conclusion</h2>
+<p>
+The data given above may be sufficient to introduce all the people about the natural beauty of Himachal.may you want know more about this beautiful state so enjoy your holidays in Himachal with your family in lap of nature.
+</p>
+</div>
+
+<hr class="new5">
+
+
+
+<div class="parallax1">
+
+ <div style="float:right;margin-top: 90px;"><img src="{% static 'images/map.png' %}"width="810"height="470"></div>
+
+  <br><br>  <button class="button" type="button"><a href="temple" style="color:white;">Temples</a></button>
+         <div><img style="margin-left: 10px;margin-top:-50px; "src="{% static 'images/hindu.png' %}" width="70"height="40"></div><br><br>
+         <button class="button" type="button"><a href="kinnaur" style="color:white;">Kinnaur</a></button>
+           <div><img style="margin-left: 10px;margin-top:-50px; "src="{% static 'images/hindu.png' %}" width="70"height="60"></div><br><br>
+            <button class="button" type="button"><b><a style="color:white;" href="khajjiar">Khajjiar</a><b></button>
+              <div><img style="margin-left: 10px;margin-top:-50px; "src="{% static 'images/hindu.png' %}"  width="70"height="60"></div><br><br>
+                 <button class="button" type="button"><a href="kangra" style="color:white;">kangra</a></button>
+                 <div><img style="margin-left: 10px;margin-top:-50px; "src="{% static 'images/hindu.png' %}" width="70"height="60"></div><br><br>
+                     <button class="button" type="button">Click ,,,,,,,Me!</button>
+                     <div><img style="margin-left: 10px;margin-top:-50px; "src="{% static 'images/hindu.png' %}"  width="70"height="60"></div><br><br>
+                            <button class="button" type="button">Click ,,,,,,,Me!</button>
+                            <div><img style="margin-left: 10px;margin-top:-50px; "src="{% static 'images/hindu.png' %}"  width="70"height="60"></div><br><br>
+   </div>
+
+<hr class="new5">
+
+<br>
+
+<!--hover text over the image-->
+<div class="container">
+  <img src="{% static 'images/shimla.jpg' %}"  class="image">
+  <div class="overlay">
+    <div class="text"><h1>Christ_church: Shimla</h1>
+     <p1>Second oldest church in North india ,</p1>
+     <p2>Designed By:-Colonel in 1844</p2>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="margin-top: 80px;">
+  <img src="{% static 'images/hpmc.jpg' %}"  class="image">
+  <div class="overlay">
+    <div class="text"><h1 style="font-family: verdana;">HPCA stadium</h1>
+     <p1>Located at dharmshala</p1>
+     <p2>Established:- 2003</p2>
+    </div>
+  </div>
+</div>
+
+
+<div style="border-style:none;border-radius:30px;background-color:lightgrey;height:690px;width: 400px;margin-left:480px;margin-top:-690px;opacity:0.5px;">
+<img src="{% static 'images/pexels-photo-3276841.jpeg' %}"width="400"height="300" style="border:none;margin-top: 60px;">
+ <marquee bgcolor=" #008fb3" scrollamount="2" direction="up" loop="true"> 
+ <center> <font color="white" >
+  <strong> <hr>Himachal Pradesh is popularly known as the Devbhumi "Land of the Gods" Himachal Pradesh is popularly known as the Devbhumi
+   "Land of the Gods", Himachal Pradesh is a state in Northern India, a beautiful hill state in India, nestles in north-west region of western
+    Himalayas<hr> 
+ Himachal Pradesh is one of the states that lies in the Indian Himalayan Region (IHR), one of the richest reservoirs of biological diversity in the world.<hr> 
+Tourism in Himachal Pradesh is a major contributor to the state's economy and growth. The Himalayas attracts tourists from all over the world. Hill stations like Shimla, Manali, Dharamshala, Dalhousie, Chamba, Khajjiar, Kullu and Kasauli are popular destinations for both domestic and foreign tourists<hr>
+  </strong></marquee>
+  </div>
+
+  
+  <div style="border-style:none;border-radius:10px;background-color:white;height:690px;width: 400px;float:right;margin-top:-690px;opacity:0.5px;">
+    <img src="{%static 'images3/n.png' %}" width="70"height="70" ><h1 style="color:red;float: right;"><b>NEWS UPDATES</b></h1>
+   <hr> 
+  <a href="https://www.bhaskar.com/"><button>Danik Bhaskar</button></a>
+   <a href="https://www.divyahimachal.com/"><button>Divya Himachal</button></a>
+   <a href="https://www.jagran.com/"><button>Danik Jagran</button></a>
+   <a href="https://www.amarujala.com/"><button >Amar Ujala</button></a>
+
+   <hr><p>किसान आंदोलन पर प्रधानमंत्री:मोदी ने कहा- नए कानूनों के बाद किसान जहां चाहें और जहां सही दाम मिले, वहां अपनी उपज बेच सकते हैं |</p><hr>
+  </div>
+<!--
+
+<img src="image/g1.png"width="410"height="250">
+-->
+<br><br>
+<div class="heading" style="height:100px;width:1348px;margin-top:20px;background-color:lightgray;filter:brigtness(100%);border-radius:30px;">
+<h1 style="font-family:verdana;text-align: center;font-size:30px;color:white;padding: 50px;">TOP DESTINATIONS</h1>
+</div><br><br>
+
+<div>
+<img src="{%static 'images/norbulingka.jpg' %}"width="200"height="200" style="border-radius: 100px;border:none;">
+</div>
+
+<div style="height:200px;width:200px;margin-left:270px;margin-top:-200px;">
+<img src="{% static 'images/manali.jpg' %}"height="200" width="200"style="border-radius: 100px;border:none;">
+</div>
+
+
+<div  style="height:200px;width:200px;margin-top:-200px;margin-left:550px;">
+<img src="{% static 'images/kha.jpg' %}"height="200" width="200"style="border-radius: 100px;border:none;">
+</div>
+
+
+
+<div  style="height:200px;width:200px;margin-top:-200px;margin-left:800px;">
+<img src="{% static 'images/kufri.jpg' %}"height="200" width="200"style="border-radius: 100px;border:none;">
+</div>
+
+
+
+<div  style="height:200px;width:200px;margin-top:-200px;margin-left:1070px;">
+<img src="{% static 'images/gyuto-monastery.jpg' %}"height="200" width="200"style="border-radius: 100px;border:none;">
+</div>
+<br><br>
+
+
+
+
+<div style="border-style:none;height:150px;width:1340px;margin-bottom: :1000px;background-color:gray;"></div>
+<div style="height:100px;width:250px;margin-top:-130px;margin-left:80px;color:white;">
+<h1 align="center" style="margin-top:-1px;">contacts</h1>
+<p align="center" style="margin-top:-20px;">8629014355</p>
+<p align="center" style="margin-top:10px;">9736586596</p>
+</div>
+
+<div class="fa-facebook">
+  <i class="fa fa-facebook" aria-hidden="true"></i>
+  <i class="fa fa-heart" aria-hidden="true"></i>
+</div>
+<div style="height:100px;width:350px;margin-top:-100px;margin-left:400px;color:white;">
+<h1 align="center" style="margin-top:-1px;">E-mail</h1>
+<p align="center" style="margin-top:-20px;">11901315@csepup.ac.n</p><br>
+<p align="center" style="margin-top:-20px;">akshitbahari3@gmail.com</p>
+
+</div>
+
+<div style="height:100px;width:500px;margin-top:-100px;margin-left:790px;color:white;">
+<h1 align="center" style="margin-top:-1px;">ADDRESS</h1>
+<p align="center" style="margin-top:-20px;">Akshit Bahri</p><br>
+<p align="center" style="margin-top:-20px;">Dept- CSE</p>
+<p align="center" style="margin-top:-20px;">Punjabi University patiala</p>
+
+</div><br>
+
+<div class="heading"style="height:100px;width:1348px;margin-top:20px;background-color:lightgray;filter:brigtness(100%);">
+<marquee><h1 style="font-family:verdana;text-align: center;font-size:30px;color:white;padding:50px;">...............<b>himachaltourism@gmail.com<b>........................</h1></marquee>
+</div><br><br>
+
+<footer>
+
+  <h5 style="color: white; text-align: center;">Copyright &copy; Akshit_bahri<h5>
+  <br>
+</footer>
+
+</body>
+</html>

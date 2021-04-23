@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+<title>Login</title>
+<head>
+<style>
+
+
+body {
+
+background-image:url("{% static 'images/beach-pics-3.jpg' %}");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button
+{
+	color:white;
+	background-color: black;
+	border-radius: 10px;
+	height:50px;
+	float: left;
+	margin-top: -200px;
+} 
+</style>
+</head>
+<body>
+
+ <a href="home"><button class="button"> <- Back To Home</button></a>
+
+
+
+<center><div style="background-color:black;margin-top:200px;border-style:solid;width:350px;height:700px;border-radius:20px">
+<img src="{% static 'images/images.png'%}"width="100"height="100" style="border-radius: 80px;border:none;"><br><br>
+<h1 style="font-size: 40px;color: white;"><b>Register here<b></h1>
+
+
+<form action="register" method="POST">
+
+  {%csrf_token%}
+
+
+<label style="color:white;margin-right: 100px;">First_name</label><br><br>
+<input type="text"Name="First_name" palceholder="first_name"Value=""style="width:168px"><br><br><br><br>
+
+
+<label style="color:white;margin-right: 100px;">username</label><br><br>
+<input type="text"Name="username" palceholder="username"Value=""style="width:168px"><br><br><br><br>
+
+
+<label style="color:white;margin-right: 120px;">email</label><br><br>
+<input type="email"Name="email" palceholder="E-mail" Value=""style="margin-left:10px;"><br><br>
+
+
+
+<label style="color:white;margin-right: 100px;">Password</label><br><br>
+<input type="password"Name="Password" palceholder="password"Value=""style="width:168px"><br><br><br><br>
+
+ 
+ <input type="submit">
+
+
+</button>
+</div>
+</center>
+</form>
+   
+    <div>
+ 	{% for message in messages %}
+ 	<h1> {{message}} <h1>
+ 		{% endfor %}
+   </div>
+</body>
+</html>

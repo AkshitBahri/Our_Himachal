@@ -1,0 +1,380 @@
+{% load static %}
+<html>
+<head>
+  <title>SACRED HIMACHAL </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">	
+
+<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ' %} ">
+<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %} ">
+
+<style>
+
+body {
+
+background-image:url("{% static 'images/w1.jpg' %}");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+.parallax {
+  /* The image used */
+  background-image: url("{%static 'images/om.jpg' %}");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+hr.new5 {
+  border: 10px  yellow;
+  border-radius: 5px;
+}
+
+ #logo
+{
+  position:absolute;
+  left:0px;
+  top:-11px;
+    height:200px;
+  width:200px;
+  border-radius: 100px;
+  font-size: 20px;
+  float:left;
+}
+
+.heading
+{
+background:url({% static 'images/w1.jpg' %});
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center; 
+text-align: center;
+opacity:0.8;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div style="">
+  <br><br>
+
+<img style="height:100px;float:right;margin-top: 20px;" src= "{%static 'images/temple_symbol.jpg' %}"  class="rounded-circle" >
+
+</div>
+
+<div class="logo" id="logo"><img src="{%static 'images/20200730_221201.jpg' %}" id="logo" /></div>
+
+  <h1 style="color:white;margin-left: 280px;margin-top:-30px;font-size: 60px;font-style: italic;">Temples In Himachal</h1>
+
+
+<hr class="new5">
+
+
+<br><br><br>
+
+<div class="parallax">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="{%static 'images2/kangra mata.jpg' %}" style="width:100%">
+  <div class="text">KANGRA DEVI</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="{%static 'images/bar1.jpg' %}" style="width:100%">
+  <div class="text">KANGRA MANDIR</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="{%static 'images/Baijnath.jpg' %}" style="width:100%">
+  <div class="text">BAIJNATH (SHIV)</div>
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+</div>
+
+<br>
+
+
+<div class="p-3 mb-2 bg-warning text-dark"></div>
+<div class="card" style="width: 18rem;margin-top: 30px;">
+  <img src=" {%static 'images/jwaladevi.jpg ' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">JWLADEVI MANDIR</h5>
+    <p class="card-text">Jwala devi temple is one of the 51 Shaktipeeths of India. It is situated in the lap of Shivalik range of Kangra valley called “Kalidhar”. This is believed to be the first ever temple built by the Pandavas. Jwala Ji is a Devi Temple Dedicated to the “GODDESS OF LIGHT”, located in Jawala Mukhi, district Kangra of Himachal Pradesh.</p>
+    <a href="https://en.wikipedia.org/wiki/Jawalamukhi" class="btn btn-primary">More info...</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;margin-left:330px;margin-top: -560px;">
+  <img src="{%static 'images/brajesh.jpg ' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">VARJESHWARI MANDIR</h5>
+    <p class="card-text">The Shree Vajreshwari Mata Mandir also known as Kangra Devi Mandir is a Hindu temple dedicated to the goddess Vajreshvari, a form of Durga located in the town Kangra, in Himachal Pradesh, India.Makar sakaranti, which comes in second week of january,is also celebrated in the temple.</p>
+    <a href="https://en.wikipedia.org/wiki/Bajreshwari_Mata_Temple,_Kangra" class="btn btn-primary">More info...</a>
+  </div>
+</div>
+
+
+<div class="card" style="width:20rem;margin-left:680px;margin-top: -555px;">
+  <img src="{%static 'images/hd2.jpg ' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">HADIMBA DEVI</h5>
+    <p class="card-text">Hidimba Devi Temple, locally known as Dhungari Temple, also known variously as the Hadimba Temple, is located in Manāli, a hill station in the State of Himāchal Pradesh in north India. It is an ancient cave temple dedicated to Hidimbi Devi, wife of Bhima, a figure in the Indian epic Mahābhārata.</p>
+    <a href="https://en.wikipedia.org/wiki/Hidimba_Devi_Temple" class="btn btn-primary">More info..</a>
+  </div>
+</div>
+
+
+<div class="card" style="width:19rem;margin-left:1020px;margin-top: -560px;">
+  <img src="{%static 'images/jakhu.jpg ' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">JAKHOO MANDIR</h5>
+    <p class="card-text">Jakhoo Temple is an ancient temple in Shimla, dedicated to the Hindu deity Hanuman. It is situated on Jakhoo Hill, Shimla's highest peak, 2.5 km east of the Ridge at a height of 2,455 m above sea level. Each year, a festival is held on Dussehra, before 1972 the festival used to be held at Annadale</p>
+    <a href="https://en.wikipedia.org/wiki/Jakhoo" class="btn btn-primary">More info...</a>
+  </div>
+</div>
+<br>
+
+<div class="p-3 mb-2 bg-warning text-dark"></div>
+
+<div class="parallax"></div>
+
+
+
+<div class="p-3 mb-2 bg-warning text-dark"></div>
+<br><br><br>
+<div class="card" style="width: 18rem;margin-top: -60px;">
+  <img src=" {%static 'images/Baijnath.jpg ' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BAIJNATH MANDIR</h5>
+    <p class="card-text">The ancient temple of Lord Shiva (Baijnath) is situated here giving the town its nameIt is a highly popular temple as it houses one of the 12 holy jyotirlingas of Lord Shiva in the country and devotees from across the country throng the temple to offer prayers to the lord</p>
+    <a href="https://en.wikipedia.org/wiki/Jawalamukhi" class="btn btn-primary">More info...</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;margin-left:330px;margin-top: -550px;">
+  <img src="{%static 'images/baroh1.jpg ' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BABA BAROH</h5>
+    <p class="card-text">Baba Baroh is a tehsil in Kangra district, India known for a temple made of white marble to Radha Krishan and the Goddess Durga. This temple is famous for the largest amount of white marble used for any temple in Himachal Pradesh.</p>
+    <a href="https://en.wikipedia.org/wiki/Bajreshwari_Mata_Temple,_Kangra" class="btn btn-primary">More info...</a>
+  </div>
+</div>
+
+
+<div class="card" style="width:20rem;margin-left:680px;margin-top: -500px;">
+  <img src="{%static 'images/baglamukhi.jpg ' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BAGLAMUKHI MANDIR</h5>
+    <p class="card-text">Baglamukhi Mandir is situated in Kangra(Bankhandi).Where hawans and pujas will take place,The shrine is dedicated to one of the ten Mahavidyas of the Supreme Goddess as per Shaktism.</p>
+    <a href="https://en.wikipedia.org/wiki/Hidimba_Devi_Temple" class="btn btn-primary">More info..</a>
+  </div>
+</div>
+
+
+<div class="card" style="width:19rem;margin-left:1020px;margin-top: -540px;">
+  <img src="{%static 'images/Chamunda.jpg ' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">CHAMUNDA DEVI</h5>
+    <p class="card-text">Chamunda also known as Chamundeshwari, and Chamundi is a fearsome form of Chandi, the Hindu Divine Mother Parvati and is one of the seven Matrikas . She is adyashakti and parashakti.She is also one of the chief Yoginis, a group of sixty-four or eighty-one Tantric goddesses, who are attendants of the warrior goddess parvati.</p>
+    <a href="https://en.wikipedia.org/wiki/Jakhoo" class="btn btn-primary">More info...</a>
+  </div>
+</div>
+<br>
+<br>
+<div class="p-3 mb-2 bg-warning text-dark"></div>
+
+
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Sr. NO.</th>
+      <th scope="col">TEMPLE</th>
+      <th scope="col">PLACE</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Barjeshvari Mandir</td>
+      <td>Kangra</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Baijnath</td>
+      <td>Baijnath</td> 
+    </tr>
+   
+       <tr>
+      <th scope="row">3</th>
+      <td>Jakhoo Temple</td>
+      <td>Shimla</td> 
+    </tr>
+
+
+       <tr>
+      <th scope="row">4</th>
+      <td>Jakhoo Temple</td>
+      <td>Shimla</td> 
+    </tr>
+
+       <tr>
+      <th scope="row">5</th>
+      <td>Chamunda Devi</td>
+      <td>Nagrota</td> 
+    </tr>
+
+      
+      <tr>
+      <th scope="row">6</th>
+      <td>Baglamukhi</td>
+      <td>Bankhandi</td> 
+    </tr>
+
+     <tr>
+      <th scope="row">7</th>
+      <td>Hadimba Devi</td>
+      <td>Kullu-Manali</td> 
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="heading"style="height:70px;width:1348px;margin-top:20px;background-color:lightgray;filter:brigtness(100%);opacity:0.8;">
+<marquee><h1 style="font-family:verdana;text-align: center;font-size:30px;color:white;padding:50px;">...............<b>himachaltourism@gmail.com<b>........................</h1></marquee>
+</div><br><br>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<footer>
+  <h5 style="color:white; text-align: center;">Copyright &copy; Akshit_Bahri<h5>
+</footer>
+
+
+
+<script src="{%static 'js/jquery.js' %}"></script>
+<script src="{%static 'js/bootsrap.min.js' %}"></script>
+
+
+</body>
+</html>
